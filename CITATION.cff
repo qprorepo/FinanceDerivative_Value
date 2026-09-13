@@ -27,9 +27,3 @@ preferred-citation:
   authors:
     - name: "QCMC Project Contributors"
   year: 2026
-  journal: "Manuscript in preparation (see manuscript/new_main.tex)"
-  notes: >
-    Replace this entry with the final journal/DOI details once the
-    manuscript is accepted (target venues discussed in the manuscript
-    include npj Quantum Information, Physical Review X Quantum, and
-    IEEE Transactions on Quantum Engineering).
