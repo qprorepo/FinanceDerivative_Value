@@ -26,7 +26,7 @@ correctness.
 ## Development setup
 
 ```bash
-git clone https://github.com/<your-org>/qcmc-quantum-finance.git
+git clone [https://github.com/<your-org>/qcmc-quantum-finance.git](https://github.com/qprorepo/FinanceDerivative_Value.git)
 cd qcmc-quantum-finance
 python -m venv .venv && source .venv/bin/activate     # or: conda env create -f environment.yml
 pip install -e ".[dev]"
