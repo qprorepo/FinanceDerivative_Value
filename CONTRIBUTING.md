@@ -44,25 +44,6 @@ mypy src                   # static typing (best-effort; numerics-heavy code is 
 
 All four are run in CI (`.github/workflows/ci.yml`) on every pull request.
 
-## Adding a new pricing / risk module
-
-1. Put the reusable engine code in `src/qcmc/<your_module>.py`, following
-   the existing modules' style: a module docstring citing the relevant
-   manuscript equation(s), NumPy-style docstrings on every public function,
-   and `__all__` explicitly listing the public API.
-2. Add unit tests in `tests/test_<your_module>.py`. At minimum, test:
-   - a closed-form or known-limit case (e.g. "as noise → 0, converges to
-     the ideal formula"),
-   - basic shape/type/range sanity (probabilities in `[0, 1]`, prices
-     non-negative, etc.),
-   - one property-based or Monte-Carlo cross-check against an independent
-     method where feasible.
-3. If the module produces a new manuscript figure, add the figure-building
-   cell to `notebooks/QCMC_Quantum_Finance_Analysis.ipynb` (kept in
-   Jupytext "percent" format for readable diffs — see
-   `notebooks/README.md`) and a corresponding entry (figure + caption +
-   "Scientific Working Explanation" box) to
-   `manuscript/Figure_Captions_and_Explanations.tex`.
 
 ## Code of Conduct
 
