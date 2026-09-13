@@ -1,0 +1,21 @@
+name: qcmc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.24
+  - scipy>=1.10
+  - pandas>=2.0
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - jupyter>=1.0
+  - ipykernel>=6.29
+  - pytest>=7.4
+  - pytest-cov>=4.1
+  - pip
+  - pip:
+      - jupytext>=1.16
+      - nbformat>=5.10
+      - nbclient>=0.10
+      - nbconvert>=7.16
+      - ruff>=0.4

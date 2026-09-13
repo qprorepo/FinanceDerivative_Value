@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qcmc"
+version = "0.1.0"
+description = "Hybrid Quantum-Classical Monte Carlo (QCMC) for derivative pricing and risk management — a from-scratch, dependency-light reference implementation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "QCMC Project Contributors" }
+]
+keywords = [
+    "quantum computing", "amplitude estimation", "quantitative finance",
+    "derivative pricing", "Monte Carlo", "risk management", "QAOA", "QUBO",
+    "Bayesian inference", "variance reduction", "catastrophe risk", "VaR", "CVaR",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7", "seaborn>=0.13"]
+notebook = ["jupyter>=1.0", "jupytext>=1.16", "ipykernel>=6.29"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "black>=24.0",
+]
+all = ["qcmc[plots,notebook,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/<your-org>/qcmc-quantum-finance"
+Repository = "https://github.com/<your-org>/qcmc-quantum-finance"
+Issues = "https://github.com/<your-org>/qcmc-quantum-finance/issues"
+Documentation = "https://github.com/<your-org>/qcmc-quantum-finance/blob/main/README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q --cov=qcmc --cov-report=term-missing"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "NPY"]
+ignore = [
+    "E731",  # lambda-assignment: used idiomatically throughout for short
+             # payoff/control-variate closures (e.g. `payoff = lambda s: ...`),
+             # matching the style of notebooks/notebook_src.py this package
+             # was factored out of. A `def` would not improve readability here.
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true

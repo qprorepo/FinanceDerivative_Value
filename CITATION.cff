@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or the accompanying manuscript in your research, please cite both the software (this record) and the manuscript below."
+title: "QCMC: Hybrid Quantum-Classical Monte Carlo for Derivative Pricing and Risk Management"
+type: software
+version: 0.1.0
+date-released: "2026-09-11"
+repository-code: "https://github.com/<your-org>/qcmc-quantum-finance"
+license: MIT
+keywords:
+  - quantum computing
+  - amplitude estimation
+  - quantitative finance
+  - derivative pricing
+  - Monte Carlo methods
+  - risk management
+  - QAOA
+  - QUBO
+  - Bayesian inference
+  - variance reduction
+  - catastrophe risk
+  - Value at Risk
+authors:
+  - name: "QCMC Project Contributors"
+preferred-citation:
+  type: article
+  title: "Hybrid Quantum-Classical Monte Carlo for Derivative Pricing and Risk Management: A Bayesian Amplitude-Estimation Framework with Empirical Variance Reduction"
+  authors:
+    - name: "QCMC Project Contributors"
+  year: 2026
+  journal: "Manuscript in preparation (see manuscript/new_main.tex)"
+  notes: >
+    Replace this entry with the final journal/DOI details once the
+    manuscript is accepted (target venues discussed in the manuscript
+    include npj Quantum Information, Physical Review X Quantum, and
+    IEEE Transactions on Quantum Engineering).

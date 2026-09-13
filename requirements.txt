@@ -1,0 +1,20 @@
+# Core numerical dependencies (required for src/qcmc engine + tests)
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+
+# Plotting (required to reproduce the 12 manuscript figures)
+matplotlib>=3.7
+seaborn>=0.13
+
+# Notebook execution (required to run/re-execute the .ipynb end-to-end)
+jupyter>=1.0
+jupytext>=1.16
+ipykernel>=6.29
+nbformat>=5.10
+nbclient>=0.10
+nbconvert>=7.16
+
+# Development / testing (optional — see requirements-dev.txt for the full set)
+pytest>=7.4
+pytest-cov>=4.1
