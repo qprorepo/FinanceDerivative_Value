@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
--------------------------------------------------------------------------------
-Note on scope: this license covers the software in this repository
-(src/qcmc, notebooks/, tests/). It does NOT cover:
-  * The third-party datasets referenced in data/README.md (Fama-French
-    factor data © Kenneth R. French / Center for Research in Security
-    Prices; NOAA Storm Events data, a U.S. Government work in the public
-    domain) — see data/README.md for their respective terms of use.
-  * The LaTeX manuscript in manuscript/, which the authors may wish to
-    license separately (e.g. under a Creative Commons license) once
-    submitted for publication.
