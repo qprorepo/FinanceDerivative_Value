@@ -55,36 +55,3 @@ in the public domain (no restrictions on use).
 non-zero property or crop damage (a "$0.00K" damage figure — the
 overwhelming majority of records — means no economic loss was reported for
 that event, not that the field is missing).
-
-## Verifying your download
-
-After placing all five files in `data/raw/`, run:
-
-```bash
-python -c "
-from qcmc.data_loading import load_fama_french
-from qcmc.cat_pricing import load_noaa_storm_losses
-
-ff = load_fama_french('data/raw/F-F_Research_Data_5_Factors_2x3_daily.csv', 'daily')
-print('FF 5-factor daily:', ff.shape, ff.index.min().date(), '->', ff.index.max().date())
-
-noaa = load_noaa_storm_losses('data/raw/StormEvents_details-ftp_v1_0_d2024_c20260728.csv')
-print('NOAA events:', noaa['n_total_events'], 'total,', noaa['n_loss_events'], 'with reported loss')
-"
-```
-
-Expected order of magnitude: several thousand daily FF rows spanning
-decades; ~69,000-70,000 total NOAA 2024 records with ~14,000-15,000
-reporting damage (exact counts vary slightly with NOAA's periodic
-reprocessing of past-year data, hence the `c20260728` creation-date suffix
-in the filename above — an event whose damage estimate is revised between
-reprocessing runs will shift these counts by a handful of records; this
-does not materially change any reported figure or conclusion).
-
-## Processed / cached artefacts
-
-`data/raw/` is git-ignored (see `.gitignore`). If you want a fast-loading
-cached version for repeated notebook runs, `notebooks/QCMC_Quantum_Finance_Analysis.ipynb`
-will happily read Parquet caches if you add that convenience yourself
-(not included by default, to keep the reference pipeline's data path fully
-transparent and auditable from the raw CSVs).
