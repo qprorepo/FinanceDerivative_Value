@@ -64,21 +64,6 @@ All four are run in CI (`.github/workflows/ci.yml`) on every pull request.
    "Scientific Working Explanation" box) to
    `manuscript/Figure_Captions_and_Explanations.tex`.
 
-## Updating the manuscript
-
-The manuscript (`manuscript/new_main.tex`) uses `glossaries` for every
-acronym (see `manuscript/glossary.tex`) — use `\gls{...}`/`\glspl{...}` in
-prose rather than typing acronyms directly, and compile with `xelatex` (not
-`pdflatex`; the preamble is XeLaTeX-specific for Unicode math support).
-
-## Reporting issues
-
-Please include:
-- The exact command/notebook cell that produced unexpected output,
-- Your `numpy`/`scipy`/`pandas` versions (`pip freeze | grep -E "numpy|scipy|pandas"`),
-- Whether the discrepancy is against a closed-form value, a documented
-  known-limit, or another run of the same code with the same seed.
-
 ## Code of Conduct
 
 This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md).
