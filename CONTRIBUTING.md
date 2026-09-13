@@ -1,6 +1,6 @@
 # Contributing to QCMC
 
-Thank you for your interest in improving this project. This repository
+This repository
 pairs a from-scratch **numerical simulation engine** (`src/qcmc/`) with an
 executable **Jupyter notebook** and a **LaTeX manuscript** — contributions
 to any of the three are welcome, but each has a different bar for
